@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VRROOMRemote"
+             x:Class="VRROOMRemote.SettingsPage"
+             Title="Settings"
+             x:DataType="local:SettingsPageModel"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" IconImageSource="save" Command="{Binding SaveCommand}" />
+        <ToolbarItem Text="Cancel" IconImageSource="close" Command="{Binding CloseCommand}" />
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <Grid Padding="20" ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="10">
+            <Label Grid.Row="0" Grid.Column="0" Text="IP Address:" HorizontalOptions="End" VerticalOptions="Center" />
+            <Entry Grid.Row="0" Grid.Column="1" Placeholder="192.168.1.100" HorizontalOptions="Start" VerticalOptions="Center" />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Port:" HorizontalOptions="End" VerticalOptions="Center" />
+            <Entry Grid.Row="1" Grid.Column="1" Placeholder="2222" HorizontalOptions="Start" VerticalOptions="Center" />
+            
+             <Label Grid.Row="3" Grid.Column="0" Text="Show IssueHotplug button" HorizontalOptions="End" VerticalOptions="Center" />
+            <CheckBox Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" />
+
+             <Label Grid.Row="4" Grid.Column="0" Text="Automatic IssueHotplug" HorizontalOptions="End" VerticalOptions="Center" />
+            <CheckBox Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" />
+        </Grid>
+
+    </ScrollView>
+</ContentPage>
